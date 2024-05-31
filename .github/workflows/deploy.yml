@@ -1,6 +1,7 @@
 name: CI/CD for React App
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -37,4 +38,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: build
-        server-dir: /path/to/your/server
+        server-dir: /
